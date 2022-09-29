@@ -28,10 +28,10 @@ import {
   Search2Icon,
   InfoOutlineIcon,
   ChevronDownIcon,
-  ChatIcon,AtSignIcon,
+  ChatIcon,
+  AtSignIcon,
 } from "@chakra-ui/icons";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import {fasolidfabagshopping } from '@fortawesome/pro-solid-svg-icons'
+
 export function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
@@ -82,7 +82,7 @@ export function Navbar() {
           </Box>
         </Box>
         <Box m="auto" w="80%">
-          <Flex >
+          <Flex>
             <Box ml="-3em">
               <img
                 src="https://i.imgur.com/GSFnQtR.jpg"
@@ -144,7 +144,7 @@ export function Navbar() {
             <Box mr="1rem" mt="2rem">
               <Flex gap="10px">
                 <Box>
-                  <AtSignIcon/>
+                  <AtSignIcon />
                 </Box>
                 <Box>
                   <Text>Sign In</Text>
