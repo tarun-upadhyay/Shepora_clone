@@ -5,6 +5,7 @@ const initState = {
     data : [],
     isAuth: false,
     error: false,
+    singlepagedata: [],
 };
 export const AppContext = createContext();
 export const AppContextProvider = ({children})=>{

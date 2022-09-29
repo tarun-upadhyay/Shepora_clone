@@ -9,7 +9,7 @@ export default function AllRoutes() {
       <Routes>
         <Route path="/" element={<Home />}></Route>
         <Route path="/products" element={<Products />}></Route>
-        <Route path="/cart" element={<Cart />}></Route>
+        <Route path="/detail" element={<Cart />}></Route>
         <Route path="/Checkout" element={<Checkout />}></Route>
       </Routes>
     </>
