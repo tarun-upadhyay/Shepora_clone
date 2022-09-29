@@ -32,11 +32,23 @@ import {
   ChatIcon,
   AtSignIcon,
 } from "@chakra-ui/icons";
-import {Link} from "react-router-dom"
+import data from "../db.json";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useContext } from "react";
+import { AppContext } from "../AuthContext/AuthcontextProvider";
 //import { } from '@fortawesome/fontawesome-free-solid'
+import { getProductRequest } from "../AuthContext/ActionCreator";
 export function Navbar() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { state, dispatch } = useContext(AppContext);
+
+  const handleclick = (da) => {
+    da === "hair"
+      ? dispatch(getProductRequest(data.hair))
+      : dispatch(getProductRequest(data.makeup));
+  };
+
   return (
     <>
       <Box>
@@ -88,12 +100,11 @@ export function Navbar() {
           <Flex>
             <Box ml="-3em">
               <Link to="/">
-              <img
-                src="https://i.imgur.com/GSFnQtR.jpg"
-                id={styles.logo}
-                alt=""
-                srcset=""
-              />
+                <img
+                  src="https://i.imgur.com/GSFnQtR.jpg"
+                  id={styles.logo}
+                  alt=""
+                />
               </Link>
             </Box>
 
@@ -165,46 +176,103 @@ export function Navbar() {
           </Flex>
         </Box>
         <Box>
-          <Box  bg="black" p="15px">
-            <Flex gap="42px" w="80%" m="auto" > 
+          <Box bg="black" p="15px">
+            <Flex gap="42px" w="80%" m="auto">
               <Box>
-              <Link to="/products"> <Text fontSize="sm" color="white" > New</Text>
-               </Link>
+                <Link to="/products">
+                  {" "}
+                  <Text
+                    fontSize="sm"
+                    color="white"
+                    onClick={() => handleclick("makeup")}
+                  >
+                    {" "}
+                    New
+                  </Text>
+                </Link>
               </Box>
               <Box>
-               <Link to="/products"> <Text fontSize="sm" color="white" > Brands</Text>
-               </Link>
+                <Link to="/products">
+                  {" "}
+                  <Text
+                    onClick={() => handleclick("hair")}
+                    fontSize="sm"
+                    color="white"
+                  >
+                    {" "}
+                    Brands
+                  </Text>
+                </Link>
               </Box>
               <Box>
-              <Link to="/products"> <Text fontSize="sm" color="white" > Makeup</Text>
-               </Link>
+                <Link to="/products">
+                  {" "}
+                  <Text
+                    fontSize="sm"
+                    color="white"
+                    onClick={() => handleclick("makeup")}
+                  >
+                    {" "}
+                    Makeup
+                  </Text>
+                </Link>
               </Box>
               <Box>
-                <Text fontSize="sm" color="white" >Skincare</Text>
+                <Text
+                  fontSize="sm"
+                  color="white"
+                  onClick={() => handleclick("hair")}
+                >
+                  Skincare
+                </Text>
               </Box>
               <Box>
-                <Text fontSize="sm" color="white" >Hair</Text>
+                <Text
+                  fontSize="sm"
+                  color="white"
+                  onClick={() => handleclick("hair")}
+                >
+                  Hair
+                </Text>
               </Box>
               <Box>
-                <Text fontSize="sm" color="white" >Fragrance</Text>
+                <Text
+                  fontSize="sm"
+                  color="white"
+                  onClick={() => handleclick("hair")}
+                >
+                  Fragrance
+                </Text>
               </Box>
               <Box>
-                <Text fontSize="sm" color="white" >Tools & Brushes</Text>
+                <Text fontSize="sm" color="white">
+                  Tools & Brushes
+                </Text>
               </Box>
               <Box>
-                <Text fontSize="sm" color="white" >Bath & Body</Text>
+                <Text fontSize="sm" color="white">
+                  Bath & Body
+                </Text>
               </Box>
               <Box>
-                <Text fontSize="sm" color="white" >Mini Size</Text>
+                <Text fontSize="sm" color="white">
+                  Mini Size
+                </Text>
               </Box>
               <Box>
-                <Text fontSize="sm" color="white" >Gifts</Text>
+                <Text fontSize="sm" color="white">
+                  Gifts
+                </Text>
               </Box>
               <Box>
-                <Text fontSize="sm" color="white" >Beauty Under $20</Text>
+                <Text fontSize="sm" color="white">
+                  Beauty Under $20
+                </Text>
               </Box>
               <Box>
-                <Text fontSize="sm" color="white" >Sale & Offers</Text>
+                <Text fontSize="sm" color="white">
+                  Sale & Offers
+                </Text>
               </Box>
             </Flex>
           </Box>
