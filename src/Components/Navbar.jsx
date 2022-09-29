@@ -32,7 +32,7 @@ import {
   ChatIcon,
   AtSignIcon,
 } from "@chakra-ui/icons";
-
+import {Link} from "react-router-dom"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 //import { } from '@fortawesome/fontawesome-free-solid'
 export function Navbar() {
@@ -87,12 +87,14 @@ export function Navbar() {
         <Box m="auto" w="80%">
           <Flex>
             <Box ml="-3em">
+              <Link to="/">
               <img
                 src="https://i.imgur.com/GSFnQtR.jpg"
                 id={styles.logo}
                 alt=""
                 srcset=""
               />
+              </Link>
             </Box>
 
             <Spacer />
@@ -166,13 +168,16 @@ export function Navbar() {
           <Box  bg="black" p="15px">
             <Flex gap="42px" w="80%" m="auto" > 
               <Box>
-                <Text fontSize="sm" color="white" >New</Text>
+              <Link to="/products"> <Text fontSize="sm" color="white" > New</Text>
+               </Link>
               </Box>
               <Box>
-                <Text fontSize="sm" color="white" > Brands</Text>
+               <Link to="/products"> <Text fontSize="sm" color="white" > Brands</Text>
+               </Link>
               </Box>
               <Box>
-                <Text fontSize="sm" color="white" >Makeup</Text>
+              <Link to="/products"> <Text fontSize="sm" color="white" > Makeup</Text>
+               </Link>
               </Box>
               <Box>
                 <Text fontSize="sm" color="white" >Skincare</Text>
