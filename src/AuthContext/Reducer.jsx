@@ -10,6 +10,12 @@ export const reducer = (state, action)=>{
                     ...state,
                     data : action.payload,
                 }
+
+                case "Single_data":
+                    return{
+                        ...state,
+                        singlepagedata: action.payload,
+                    }
            default:
             return state 
     }

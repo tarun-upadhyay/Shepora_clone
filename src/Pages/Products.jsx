@@ -23,7 +23,8 @@ import { AppContext } from "../AuthContext/AuthcontextProvider";
 import SortingComp from "../Components/Sorting";
 import { Link } from "react-router-dom";
 import { StarIcon } from "@chakra-ui/icons";
-import { getProductRequest, productsAsc } from "../AuthContext/ActionCreator";
+
+import { singlePagedata, productsAsc } from "../AuthContext/ActionCreator";
 import Slidebar from "../AuthContext/slidebar";
 export default function Products() {
   const { state, dispatch } = useContext(AppContext);
@@ -33,8 +34,10 @@ export default function Products() {
       ? dispatch(productsAsc(state.data?.sort((b, a) => a.price - b.price)))
       : dispatch(productsAsc(state.data?.sort((a, b) => a.price - b.price)));
   };
-  const singlepage = (type, id) => {
-    console.log(type, id);
+  const singlepage = (id,type) => {
+    // console.log(type, id);
+    let fil = state.data?.filter((el) => el.type == type && el.id === id);
+    dispatch(singlePagedata(fil))
   };
   return (
     <>
