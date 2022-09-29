@@ -5,6 +5,11 @@ export const reducer = (state, action)=>{
                 ...state,
                 data: action.payload,
             }
+            case "PRODUCT_ASC":
+                return{
+                    ...state,
+                    data : action.payload,
+                }
            default:
             return state 
     }
