@@ -1,0 +1,294 @@
+{
+  "makeup": [
+    {
+      "title": "SEPHORA COLLECTION",
+      "name": "Clean Lip Balm & Scrub",
+      "stars": 2,
+      "price": 3.50,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s2282838-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=230",
+      "id": 1
+    },
+    {
+      "title": "SEPHORA COLLECTION",
+      "name": "#LIPSTORIES Lipstick",
+      "stars": 4,
+      "price": 9.00,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s2148385-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=230",
+      "id": 2
+    },
+    {
+      "title": "HUDA BEAUTY",
+      "name": "Easy Bake Loose Baking & Setting",
+      "stars": 4,
+      "price": 35.00,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s2555811-main-zoom.jpg?imwidth=230",
+      "id": 3
+    },
+    {
+      "title": "Laura Mercier",
+      "name": "Ultra-Blur Talc-Free Translucent Loose Setting Powder",
+      "stars": 5,
+      "price": 44.00,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s2588515-main-zoom.jpg?imwidth=230",
+      "id": 4
+    },
+    {
+      "title": "SEPHORA FAVORITES",
+      "name": "Flora Gorgeous Jasmine Eau de Parfum",
+      "stars": 3,
+      "price": 92.00,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s1942812-main-zoom.jpg?imwidth=230",
+      "id": 5
+    },
+    {
+      "title": "KAYALI",
+      "name": "LOVEFEST BURNING CHERRY",
+      "stars": 4,
+      "price": 23.00,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s2611465-main-zoom.jpg?imwidth=230",
+      "id": 6
+    },
+    {
+      "title": "SEPHORA COLLECTION",
+      "name": "Double-Ended Textured Facial Roller",
+      "stars": 4,
+      "price": 12.00,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s2471878-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=230",
+      "id": 7
+    },
+    {
+      "title": "FOREO",
+      "name": "LUNA play plus 2",
+      "stars": 3,
+      "price": 69.00,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s2486405-main-zoom.jpg?imwidth=230",
+      "id": 8
+    },
+    {
+      "title": "Dr. Jart+",
+      "name": "Cicapair™ Tiger Grass Color Correcting Treatment SPF 30",
+      "stars": 5,
+      "price": 52.00,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s1855709-main-zoom.jpg?imwidth=230",
+      "id": 9
+    },
+    {
+      "title": "Dr. Jart+",
+      "name": "Healthy Glow Kit",
+      "stars": 3,
+      "price": 65.00,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s2618882-main-zoom.jpg?imwidth=230",
+      "id": 10
+    },
+    {
+      "title": "SEPHORA COLLECTION",
+      "name": "Silicone Scalp Massager",
+      "stars": 3,
+      "price": 12.00,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s2414555-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=230",
+      "id": 11
+    },
+    {
+      "title": "Briogeo",
+      "name": "Briogeo x Mikayla Vegan Apple Honey Deep Conditioning Hair Mask for Dry + Damaged Hair",
+      "stars": 1,
+      "price": 40.00,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s2503969-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=230",
+      "id": 12
+    },
+    {
+      "title": "MAKE UP FOR EVER",
+      "name": "Artist Color Pencil: Eye, Lip & Brow Pencil",
+      "stars": 4,
+      "price": 22.00,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s2525780-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=230",
+      "id": 13
+    },
+    {
+      "title": "Benefit Cosmetics",
+      "name": "Precisely, My Brow Pencil Waterproof Eyebrow Definer",
+      "stars": 3,
+      "price": 15.00,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s870618-main-zoom.jpg?imwidth=230",
+      "id": 14
+    },
+    {
+      "title": "Rare Beauty by Selena Gomez",
+      "name": "Kind Words Matte Lipstick",
+      "stars": 4,
+      "price": 20.00,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s2316172-main-zoom.jpg?imwidth=230",
+      "id": 15
+    },
+    {
+      "title": "SEPHORA COLLECTION",
+      "name": "Astrology Lip Stories Lipstick",
+      "stars": 2,
+      "price": 5.50,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s2364479-main-zoom.jpg?pb=2020-03-sephora-value-2020&imwidth=230",
+      "id": 16
+    }
+  ],
+  "hair": [
+    {
+      "title": "Drybar",
+      "name": "The Double Shot Blow-Dryer Brush",
+      "stars": 5,
+      "price": 155.00,
+      "type": "hair",
+      "image": "https://www.sephora.com/productimages/sku/s2314680-main-zoom.jpg?imwidth=230",
+      "id": 1
+    },
+    {
+      "title": "Curlsmith",
+      "name": "Hair Defrizzion Dryer",
+      "stars": 3,
+      "price": 89.00,
+      "type": "hair",
+      "image": "https://www.sephora.com/productimages/sku/s2623247-main-zoom.jpg?imwidth=230",
+      "id": 2
+    },
+    {
+      "title": "Olaplex",
+      "name": "No. 5 Bond Maintenance™ Conditioner",
+      "stars": 5,
+      "price": 35.00,
+      "type": "hair",
+      "image": "https://www.sephora.com/productimages/sku/s2118867-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=230",
+      "id": 3
+    },
+    {
+      "title": "Curlsmith",
+      "name": "Bouncy Strength Volume Hair Foam",
+      "stars": 3,
+      "price": 26.00,
+      "type": "hair",
+      "image": "https://www.sephora.com/productimages/sku/s2622348-main-zoom.jpg?imwidth=230",
+      "id": 4
+    },
+    {
+      "title": "Drybar",
+      "name": "The Mixologist Interchangeable Styling Iron",
+      "stars": 4,
+      "price": 99.00,
+      "type": "hair",
+      "image": "https://www.sephora.com/productimages/sku/s2375301-main-zoom.jpg?imwidth=230",
+      "id": 5
+    },
+    {
+      "title": "Drybar",
+      "name": "High Tops Self-Grip Rollers",
+      "stars": 3,
+      "price": 12.00,
+      "type": "hair",
+      "image": "https://www.sephora.com/productimages/sku/s1638238-main-zoom.jpg?imwidth=230",
+      "id": 6
+    },
+    {
+      "title": "K18 Biomimetic Hairscience",
+      "name": "Leave-In Molecular Repair Hair Mask & Mini Detox Shampoo Set",
+      "stars": 4,
+      "price": 75.00,
+      "type": "hair",
+      "image": "https://www.sephora.com/productimages/sku/s2592897-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=230",
+      "id": 7
+    },
+    {
+      "title": "Virtue",
+      "name": "Frizz Block Humidity Proof Smoothing Spray 38 | Ask a question | 1.9K",
+      "stars": 4,
+      "price": 44.00,
+      "type": "hair",
+      "image": "https://www.sephora.com/productimages/sku/s2579597-main-zoom.jpg?imwidth=230",
+      "id": 8
+    },
+    {
+      "title": "Living Proof",
+      "name": "Style Lab Flex Hairspray",
+      "stars": 5,
+      "price": 27.00,
+      "type": "hair",
+      "image": "https://www.sephora.com/productimages/sku/s1543685-main-zoom.jpg?imwidth=230",
+      "id": 9
+    },
+    {
+      "title": "Ceremonia",
+      "name": "Scalp Massager",
+      "stars": 4,
+      "price": 16.00,
+      "type": "hair",
+      "image": "https://www.sephora.com/productimages/sku/s2604676-main-zoom.jpg?imwidth=230",
+      "id": 10
+    },
+    {
+      "title": "Briogeo",
+      "name": "Briogeo x Mikayla Vegan Apple Honey Deep Conditioning Hair Mask for Dry + Damaged Hair",
+      "stars": 1,
+      "price": 40.00,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s2503969-main-zoom.jpg?pb=clean-planet-positive-badge-2021&imwidth=230",
+      "id": 11
+    },
+    {
+      "title": "FOREO",
+      "name": "LUNA play plus 2",
+      "stars": 3,
+      "price": 69.00,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s2486405-main-zoom.jpg?imwidth=230",
+      "id": 12
+    },
+    {
+      "title": "KAYALI",
+      "name": "LOVEFEST BURNING CHERRY",
+      "stars": 4,
+      "price": 23.00,
+      "type": "makeup",
+      "image": "https://www.sephora.com/productimages/sku/s2611465-main-zoom.jpg?imwidth=230",
+      "id": 13
+    },
+    {
+      "title": "Drybar",
+      "name": "Blonde Ale Color-Enhancing Brightening Hair Mask",
+      "stars": 1,
+      "price": 35.00,
+      "type": "hair",
+      "image": "https://www.sephora.com/productimages/sku/s2333144-main-zoom.jpg?imwidth=230",
+      "id": 14
+    },
+    {
+      "title": "SEPHORA COLLECTION",
+      "name": "Sephora Collection x Wet Brush Luxe Quick Dry",
+      "stars": 4,
+      "price": 19.00,
+      "type": "hair",
+      "image": "https://www.sephora.com/productimages/sku/s2462182-main-zoom.jpg?imwidth=230",
+      "id": 15
+    },
+    {
+      "title": "amika",
+      "name": "Perk Up Plus Extended Clean Dry Shampoo",
+      "stars": 5,
+      "price": 29.00,
+      "type": "hair",
+      "image": "https://www.sephora.com/productimages/sku/s2592194-main-zoom.jpg?pb=2020-03-sephora-clean-2019&imwidth=230",
+      "id": 16
+    }
+  ]
+}
