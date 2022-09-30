@@ -26,10 +26,10 @@ export default function Cart() {
   return (
     <>
       <Box>
-        <Box>
-          <Flex>
+        <Box m="auto" w="70%">
+          <Flex gap="10px" mt="20px">
             <Box>
-              <Image src={state.singlepagedata[0]?.image}></Image>
+              <Image boxSize="30rem" src={state.singlepagedata[0]?.image}></Image>
             </Box>
             <Box>
               <Heading>{state.singlepagedata[0]?.title}</Heading>
