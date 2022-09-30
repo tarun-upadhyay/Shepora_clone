@@ -4,3 +4,6 @@ export const getProductRequest = (payload)=>{
 export const productsAsc = (payload)=>{
     return { type: "PRODUCT_ASC", payload}
 }
+export const singlePagedata = (payload)=>{
+    return {type: "Single_data", payload}
+}
