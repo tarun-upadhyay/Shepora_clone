@@ -10,9 +10,9 @@ const initState = {
 export const AppContext = createContext();
 export const AppContextProvider = ({children})=>{
     const [ state, dispatch ] = useReducer(reducer, initState);
-    const value = {state, dispatch};
+    
     return(
-        <AppContext.Provider value={value}>
+        <AppContext.Provider value={{state, dispatch}}>
             {children}
         </AppContext.Provider>
     )

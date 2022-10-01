@@ -25,9 +25,15 @@ import { Link } from "react-router-dom";
 
 import { StarIcon, InfoOutlineIcon } from "@chakra-ui/icons";
 import { AppContext } from "../AuthContext/AuthcontextProvider";
+import { CartContext } from "../CartContext/CartContextProvider";
+import { addToCart } from "../CartContext/action";
+const itemAlreadyExists =()=>{}
 export default function Cart() {
+
+  const { cartState , cartDispatch } = useContext(CartContext);
+
   const { state } = useContext(AppContext);
-  console.log();
+ 
   const [value, setValue] = useState(false);
   return (
     <>
@@ -112,7 +118,8 @@ export default function Cart() {
                     borderRadius={"45%"}
                     w="100"
                     h="100"
-                  >
+                  disabled={itemAlreadyExists(state.singlepagedata[0])}
+                  onClick={()=>cartDispatch(addToCart(state.singlepagedata[0]))}>
                     Add to Basket {value && "For"} {value}{" "}
                   </Button>
                 </Link>
