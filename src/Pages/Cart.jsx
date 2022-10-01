@@ -16,6 +16,7 @@ import {
   MenuDivider,
   Flex,
   Heading,
+  useDisclosure,
   Radio,
   Stack,
   RadioGroup,
@@ -27,13 +28,12 @@ import { StarIcon, InfoOutlineIcon } from "@chakra-ui/icons";
 import { AppContext } from "../AuthContext/AuthcontextProvider";
 import { CartContext } from "../CartContext/CartContextProvider";
 import { addToCart } from "../CartContext/action";
-const itemAlreadyExists =()=>{}
+const itemAlreadyExists = () => {};
 export default function Cart() {
-
-  const { cartState , cartDispatch } = useContext(CartContext);
+  const { cartState, cartDispatch } = useContext(CartContext);
 
   const { state } = useContext(AppContext);
- 
+  const { isOpen, onOpen, onClose } = useDisclosure();
   const [value, setValue] = useState(false);
   return (
     <>
@@ -109,20 +109,24 @@ export default function Cart() {
                 </Box>
               </Box>
               <Box p={20}>
-                <Link to="/Checkout">
-                  <Button
-                    p={10}
-                    bgColor="
+                {/* <Link to="/Checkout"> */}
+                <Button
+                  p={10}
+                  bgColor="
 #cf112c"
-                    color={"white"}
-                    borderRadius={"45%"}
-                    w="100"
-                    h="100"
+                  color={"white"}
+                  borderRadius={"45%"}
+                  w="100"
+                  h="100"
                   disabled={itemAlreadyExists(state.singlepagedata[0])}
-                  onClick={()=>cartDispatch(addToCart(state.singlepagedata[0]))}>
-                    Add to Basket {value && "For"} {value}{" "}
-                  </Button>
-                </Link>
+                  onClick={() =>
+                    cartDispatch(addToCart(state.singlepagedata[0]))
+                  }
+                >
+                  Add to Basket {value && "For"} {value}{" "}
+                </Button>
+
+                {/* </Link> */}
               </Box>
             </Box>
           </Flex>
