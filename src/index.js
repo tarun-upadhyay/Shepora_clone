@@ -7,17 +7,18 @@ import { BrowserRouter } from "react-router-dom";
 import "./index.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import { AppContextProvider } from "./AuthContext/AuthcontextProvider";
+import { CartContextProvider } from "./CartContext/CartContextProvider";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-
-    <AppContextProvider>
-    <BrowserRouter>
-      <ChakraProvider>
-        <App />
-      </ChakraProvider>
-    </BrowserRouter>
-    </AppContextProvider>
-  
+  <AppContextProvider>
+    <CartContextProvider>
+      <BrowserRouter>
+        <ChakraProvider>
+          <App />
+        </ChakraProvider>
+      </BrowserRouter>
+    </CartContextProvider>
+  </AppContextProvider>
 );
 
 // If you want to start measuring performance in your app, pass a function
