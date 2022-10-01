@@ -69,7 +69,14 @@ export default function Cart() {
                 )}
               </Box>
 
-              <Box p={3} mt="10" border="1px" borderColor="gray.200" bg="#f6f6f8" borderRadius={"3"}>
+              <Box
+                p={3}
+                mt="10"
+                border="1px"
+                borderColor="gray.200"
+                bg="#f6f6f8"
+                borderRadius={"3"}
+              >
                 <Box>
                   <Heading as="h2" size="xl" fontSize={"20px"}>
                     Get It Shipped
@@ -96,20 +103,27 @@ export default function Cart() {
                 </Box>
               </Box>
               <Box p={20}>
-                <Button
-                  p={10}
-                  bgColor="
+                <Link to="/Checkout">
+                  <Button
+                    p={10}
+                    bgColor="
 #cf112c"
-                  color={"white"}
-                  borderRadius={"45%"}
-                  w="100"
-                  h="100"
-                >
-                  Add to Basket {value && "For"} {value}{" "}
-                </Button>
+                    color={"white"}
+                    borderRadius={"45%"}
+                    w="100"
+                    h="100"
+                  >
+                    Add to Basket {value && "For"} {value}{" "}
+                  </Button>
+                </Link>
               </Box>
             </Box>
           </Flex>
+        </Box>
+        <Box>
+          <Center>
+            <Image src="https://i.imgur.com/23WGwBb.jpg" />
+          </Center>
         </Box>
       </Box>
     </>
