@@ -11,8 +11,14 @@ import {
   MenuButton,
   Menu,
   MenuOptionGroup,
-  MenuList,
+  Modal,
+  ModalOverlay,
+  ModalHeader,
+  ModalContent,
+  ModalCloseButton,
+  ModalBody,
   MenuItemOption,
+  ModalFooter,
   MenuDivider,
   Flex,
   Heading,
@@ -34,6 +40,10 @@ export default function Cart() {
 
   const { state } = useContext(AppContext);
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const handleAddTobag  = (addedTobag,onClose)=>{
+cartDispatch(addToCart(addedTobag))
+onClose()
+  };
   const [value, setValue] = useState(false);
   return (
     <>
@@ -111,21 +121,43 @@ export default function Cart() {
               <Box p={20}>
                 {/* <Link to="/Checkout"> */}
                 <Button
-                  p={10}
+                  p={5}
                   bgColor="
 #cf112c"
                   color={"white"}
-                  borderRadius={"45%"}
-                  w="100"
-                  h="100"
+                  borderRadius={"5%"}
+                 w="250px"
+                 
+                 
                   disabled={itemAlreadyExists(state.singlepagedata[0])}
-                  onClick={() =>
-                    cartDispatch(addToCart(state.singlepagedata[0]))
-                  }
+                  onClick={onOpen}
                 >
                   Add to Basket {value && "For"} {value}{" "}
                 </Button>
+                <Modal isOpen={isOpen} onClose={onClose} >
+                  <ModalOverlay />
+                  <ModalContent >
+                    <ModalHeader>Checkout</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody pb="1rem">
+                      <Flex ml="1">
+                      <Image src={state.singlepagedata[0]?.image}></Image>
+                      <Box>
+                      <Text fontSize='3xl'>{state.singlepagedata[0]?.name}</Text>
+                      </Box>
+                      </Flex>
+                    </ModalBody>
 
+                    <ModalFooter>
+                      <Button colorScheme="blue" mr={3} onClick={()=>handleAddTobag(state.singlepagedata[0], onClose)} >
+                        Add to Bag
+                      </Button>
+                      <Link to={"/checkout"}>
+                      <Button variant="outline" colorScheme="black">Checkout</Button></Link>
+                    </ModalFooter>
+                  </ModalContent>
+                </Modal>
+                {/* , */}
                 {/* </Link> */}
               </Box>
             </Box>
