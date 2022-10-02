@@ -3,19 +3,19 @@ import { act } from "react-dom/test-utils";
 
 export const AuthContext = createContext();
 const initState = {
-  isLoading: true,
+  isLoading: false,
   isAuth: false,
   token: null,
   isError: false,
   payment: true,
 };
-export const authReducer = (state, action) => {
+const authReducer = (state, action) => {
   switch (action.type) {
     case "LOGIN_SUCCESS": {
       return {
         isAuth: true,
         token: action.payload,
-        payment: false,
+    
       };
     }
     case "LOGIN_LOADING": {
@@ -29,6 +29,15 @@ export const authReducer = (state, action) => {
         ...state,
         isError: true,
       };
+    }
+    case "PAYMENT_DONE":{
+        return{
+            ...state,
+            payment: false,
+        }
+    }
+    default: {
+        return state
     }
   }
 };
@@ -51,3 +60,4 @@ export const loginSuccesAction = (payload) => ({
 export const loginFailureAction = () => ({
   type: "LOGIN_FAILURE",
 });
+export const paymentdone = ()=>({type: "PAYMENT_DONE"})
