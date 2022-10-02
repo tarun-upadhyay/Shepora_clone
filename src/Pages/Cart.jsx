@@ -37,28 +37,27 @@ import { addToCart } from "../CartContext/action";
 
 export default function Cart() {
   const { cartState, cartDispatch } = useContext(CartContext);
-const [ bagColor, setBagColor ] = useState(false)
+  const [bagColor, setBagColor] = useState(false);
   const { state } = useContext(AppContext);
   const { isOpen, onOpen, onClose } = useDisclosure();
 
-  const handleAddTobag  = (addedTobag,onClose)=>{
-cartDispatch(addToCart(addedTobag))
-setBagColor(true)
-onClose()
-  };
-  const itemAlreadyExists = (currentItem, cartState, onOpen) => {
-    onOpen()
-   if(cartState.find((el)=>el.id===currentItem.id)){
-    
-    return true
-   }
-   return false
+  const handleAddTobag = (addedTobag, onClose) => {
+    cartDispatch(addToCart(addedTobag));
+    setBagColor(true);
+    onClose();
   }
+  const itemAlreadyExists = (currentItem, cartState, onOpen) => {
+    onOpen();
+    if (cartState.find((el) => el.id === currentItem.id)) {
+      return true;
+    }
+    return false;
+  };
   const [value, setValue] = useState(false);
   return (
     <>
       <Box>
-        <Box m="auto" w="90%" border="1px" borderColor="red.200">
+        <Box m="auto" w="90%" >
           <Flex gap="10px" mt="20px">
             <Box ml="10px">
               <Image
@@ -133,37 +132,59 @@ onClose()
                 <Button
                   p={5}
                   bgColor={bagColor ? "blue" : "#cf112c"}
-variant="outline"
+                  variant="outline"
                   color={"white"}
                   borderRadius={"5%"}
-                 w="250px"
-                 
-                 
-                 // disabled={}
-                  onClick={()=>{itemAlreadyExists(state.singlepagedata[0],cartState, onOpen)}}
+                  w="250px"
+                  // disabled={}
+                  onClick={() => {
+                    itemAlreadyExists(
+                      state.singlepagedata[0],
+                      cartState,
+                      onOpen
+                    );
+                  }}
                 >
-                  {bagColor ? "Added" : "Add to Basket"} {value && "For"} {value}{" "}
+                  {bagColor ? "Added" : "Add to Basket"} {value && "For"}{" "}
+                  {value}{" "}
                 </Button>
-                <Modal isOpen={isOpen} onClose={onClose} >
+                <Modal isOpen={isOpen} onClose={onClose}>
                   <ModalOverlay />
-                  <ModalContent >
+                  <ModalContent>
                     <ModalHeader>Checkout</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody pb="1rem">
                       <Flex ml="1">
-                      <Image src={state.singlepagedata[0]?.image}></Image>
-                      <Box>
-                      <Text fontSize='3xl'>{state.singlepagedata[0]?.name}</Text>
-                      </Box>
+                        <Image src={state.singlepagedata[0]?.image}></Image>
+                        <Box>
+                          <Text fontSize="3xl">
+                            {state.singlepagedata[0]?.name}
+                          </Text>
+                        </Box>
                       </Flex>
                     </ModalBody>
 
                     <ModalFooter>
-                      <Button colorScheme="blue" mr={3} onClick={()=>handleAddTobag(state.singlepagedata[0], onClose)} >
+                      <Button
+                        colorScheme="blue"
+                        mr={3}
+                        onClick={() =>
+                          handleAddTobag(state.singlepagedata[0], onClose)
+                        }
+                      >
                         Add to Bag
                       </Button>
                       <Link to={"/checkout"}>
-                      <Button variant="outline" onClick={()=>{handleAddTobag(state.singlepagedata[0])}} colorScheme="black">Checkout</Button></Link>
+                        <Button
+                          variant="outline"
+                          onClick={() => {
+                            handleAddTobag(state.singlepagedata[0],onClose);
+                          }}
+                          colorScheme="black"
+                        >
+                          Checkout
+                        </Button>
+                      </Link>
                     </ModalFooter>
                   </ModalContent>
                 </Modal>
