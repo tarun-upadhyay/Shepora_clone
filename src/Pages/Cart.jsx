@@ -34,16 +34,26 @@ import { StarIcon, InfoOutlineIcon } from "@chakra-ui/icons";
 import { AppContext } from "../AuthContext/AuthcontextProvider";
 import { CartContext } from "../CartContext/CartContextProvider";
 import { addToCart } from "../CartContext/action";
-const itemAlreadyExists = () => {};
+
 export default function Cart() {
   const { cartState, cartDispatch } = useContext(CartContext);
-
+const [ bagColor, setBagColor ] = useState(false)
   const { state } = useContext(AppContext);
   const { isOpen, onOpen, onClose } = useDisclosure();
+
   const handleAddTobag  = (addedTobag,onClose)=>{
 cartDispatch(addToCart(addedTobag))
+setBagColor(true)
 onClose()
   };
+  const itemAlreadyExists = (currentItem, cartState, onOpen) => {
+    onOpen()
+   if(cartState.find((el)=>el.id===currentItem.id)){
+    
+    return true
+   }
+   return false
+  }
   const [value, setValue] = useState(false);
   return (
     <>
@@ -122,17 +132,17 @@ onClose()
                 {/* <Link to="/Checkout"> */}
                 <Button
                   p={5}
-                  bgColor="
-#cf112c"
+                  bgColor={bagColor ? "blue" : "#cf112c"}
+variant="outline"
                   color={"white"}
                   borderRadius={"5%"}
                  w="250px"
                  
                  
-                  disabled={itemAlreadyExists(state.singlepagedata[0])}
-                  onClick={onOpen}
+                 // disabled={}
+                  onClick={()=>{itemAlreadyExists(state.singlepagedata[0],cartState, onOpen)}}
                 >
-                  Add to Basket {value && "For"} {value}{" "}
+                  {bagColor ? "Added" : "Add to Basket"} {value && "For"} {value}{" "}
                 </Button>
                 <Modal isOpen={isOpen} onClose={onClose} >
                   <ModalOverlay />
@@ -153,7 +163,7 @@ onClose()
                         Add to Bag
                       </Button>
                       <Link to={"/checkout"}>
-                      <Button variant="outline" colorScheme="black">Checkout</Button></Link>
+                      <Button variant="outline" onClick={()=>{handleAddTobag(state.singlepagedata[0])}} colorScheme="black">Checkout</Button></Link>
                     </ModalFooter>
                   </ModalContent>
                 </Modal>
