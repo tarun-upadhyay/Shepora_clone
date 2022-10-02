@@ -8,15 +8,19 @@ import "./index.css";
 import { ChakraProvider } from "@chakra-ui/react";
 import { AppContextProvider } from "./AuthContext/AuthcontextProvider";
 import { CartContextProvider } from "./CartContext/CartContextProvider";
+import { AuthContextProvider } from "./LastContext/AppContextProvider";
 const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
   <AppContextProvider>
     <CartContextProvider>
-      <BrowserRouter>
-        <ChakraProvider>
-          <App />
-        </ChakraProvider>
-      </BrowserRouter>
+      <AuthContextProvider>
+        <BrowserRouter>
+          <ChakraProvider>
+            <App />
+          </ChakraProvider>
+        </BrowserRouter>
+      </AuthContextProvider>
     </CartContextProvider>
   </AppContextProvider>
 );
