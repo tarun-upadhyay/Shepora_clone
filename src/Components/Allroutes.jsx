@@ -3,6 +3,7 @@ import Home from "../Pages/Home";
 import Products from "../Pages/Products";
 import Cart from "../Pages/Cart";
 import Checkout from "../Pages/Checkout";
+import Payment from "../Pages/Payment";
 export default function AllRoutes() {
   return (
     <>
@@ -11,6 +12,7 @@ export default function AllRoutes() {
         <Route path="/products" element={<Products />}></Route>
         <Route path="/detail" element={<Cart />}></Route>
         <Route path="/Checkout" element={<Checkout />}></Route>
+        <Route path="/payment" element={<Payment />}></Route>
       </Routes>
     </>
   );
