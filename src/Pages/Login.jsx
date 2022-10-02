@@ -35,12 +35,12 @@ const Login = () => {
     }).then((res)=>authDispatch(loginSuccesAction(res))).catch(()=>authDispatch(loginFailureAction()))
   }
   if(authState.isAuth){
-    authDispatch(paymentdone())
+    
   return  <Navigate to="/checkout"/>
   }
   return (
     <>
-      <Box w="20%" m="auto" mt="50">
+      <Box w="20%" m="auto" mt="50" mb="100px">
         <Grid templateColumns="repeat(1,1fr)" gap="2" w="sm">
           <GridItem colSpan={1}>
             <FormControl isRequired>

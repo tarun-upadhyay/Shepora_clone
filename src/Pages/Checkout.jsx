@@ -37,7 +37,7 @@ export default function Checkout() {
   };
   return (
     <>
-      <Box>
+      <Box mb="10">
         <Box m="auto" w="75%" mt="2rem">
           <Box>
             <Flex gap={10}>
@@ -175,8 +175,7 @@ export default function Checkout() {
                       </HStack>
                       <Text>*Shipping & taxes calculated during checkout</Text>
                       {
-                        
-                        <Link to={ authState.isAuth ? "/payment": "/login"}>
+                        <Link to={authState.isAuth ? "/payment" : "/login"}>
                           <Button
                             colorScheme="red"
                             width="100%"

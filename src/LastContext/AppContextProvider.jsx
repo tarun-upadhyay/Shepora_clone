@@ -15,6 +15,7 @@ const authReducer = (state, action) => {
       return {
         isAuth: true,
         token: action.payload,
+        payment: true
     
       };
     }
